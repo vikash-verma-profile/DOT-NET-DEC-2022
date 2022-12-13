@@ -10,12 +10,17 @@ namespace Session_2
         {
             Console.WriteLine("Value of x is "+x);
         }
+        public void Print()
+        {
+            Console.WriteLine("Hi I am print from A");
+        }
     }
     class B:A
     {
        public B(int x,int y):base(x)
         {
             Console.WriteLine("Value of y is "+y);
+            base.Print();
         }
     }
     class C:B
@@ -27,7 +32,7 @@ namespace Session_2
     }
     class Class1
     {
-        public static void Main()
+        public static void Main2()
         {
             C c = new C(1,2,3);
         }
