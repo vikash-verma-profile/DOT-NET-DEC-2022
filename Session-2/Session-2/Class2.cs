@@ -29,7 +29,7 @@ namespace Session_2
     }
     class Class2
     {
-        public static void Main()
+        public static void Main3()
         {
             PhotoBook p1 = new PhotoBook();
             Console.WriteLine(p1.GetNumberPages());
