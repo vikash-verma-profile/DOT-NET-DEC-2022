@@ -27,7 +27,7 @@ namespace Session_2
     }
     class Class4
     {
-        public static void Main()
+        public static void Main5()
         {
             BaseClass  c = new ChildClass();
             Console.WriteLine(c.GetMethodOwner());
@@ -36,5 +36,6 @@ namespace Session_2
     }
 }
 
+//Don't 
 //new and override
 //virtual and override
