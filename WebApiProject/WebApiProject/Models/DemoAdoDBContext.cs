@@ -17,6 +17,8 @@ namespace WebApiProject.Models
         {
         }
 
+        public virtual DbSet<TblDepartment> TblDepartments { get; set; }
+        public virtual DbSet<TblEmployee> TblEmployees { get; set; }
         public virtual DbSet<TblSample> TblSamples { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -31,6 +33,26 @@ namespace WebApiProject.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
+
+            modelBuilder.Entity<TblDepartment>(entity =>
+            {
+                entity.ToTable("tblDepartment");
+
+                entity.Property(e => e.Department).HasMaxLength(50);
+            });
+
+            modelBuilder.Entity<TblEmployee>(entity =>
+            {
+                entity.ToTable("tblEmployee");
+
+                entity.Property(e => e.DepartmentId).HasColumnName("DepartmentID");
+
+                entity.Property(e => e.FirstName).HasMaxLength(50);
+
+                entity.Property(e => e.Gender).HasMaxLength(50);
+
+                entity.Property(e => e.LastName).HasMaxLength(50);
+            });
 
             modelBuilder.Entity<TblSample>(entity =>
             {

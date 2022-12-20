@@ -1,0 +1,16 @@
+Dataset==> copy of database result /query result from tables
+Disconnected
+
+Connected
+SqlDataReader==>query data from a single table
+DataTable==>subitem of a dataset
+
+SQLConnection-connection strings
+SQlCommand-
+SqlDataAdapter
+
+
+Data Source=DESKTOP-PP0TB7N;Initial Catalog=DemoAdoDB;Integrated Security=True
+
+Scaffold-Dbcontext "Data Source=DESKTOP-PP0TB7N;Initial Catalog=DemoAdoDB;Integrated Security=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Force
+
