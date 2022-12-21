@@ -19,6 +19,7 @@ namespace WebApiProject.Models
 
         public virtual DbSet<TblDepartment> TblDepartments { get; set; }
         public virtual DbSet<TblEmployee> TblEmployees { get; set; }
+        public virtual DbSet<TblLogin> TblLogins { get; set; }
         public virtual DbSet<TblSample> TblSamples { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -52,6 +53,17 @@ namespace WebApiProject.Models
                 entity.Property(e => e.Gender).HasMaxLength(50);
 
                 entity.Property(e => e.LastName).HasMaxLength(50);
+            });
+
+            modelBuilder.Entity<TblLogin>(entity =>
+            {
+                entity.ToTable("tblLogin");
+
+                entity.Property(e => e.Id).HasColumnName("ID");
+
+                entity.Property(e => e.Password).HasMaxLength(50);
+
+                entity.Property(e => e.UserName).HasMaxLength(50);
             });
 
             modelBuilder.Entity<TblSample>(entity =>

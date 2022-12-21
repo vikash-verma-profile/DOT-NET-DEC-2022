@@ -14,3 +14,15 @@ Data Source=DESKTOP-PP0TB7N;Initial Catalog=DemoAdoDB;Integrated Security=True
 
 Scaffold-Dbcontext "Data Source=DESKTOP-PP0TB7N;Initial Catalog=DemoAdoDB;Integrated Security=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Force
 
+Create a controller
+
+get request that will fetch all details of employee and it's from which department ==>LINQ
+
+add-migration <migration-name>
+Remove-migration
+Update-database
+script-migration
+
+
+
+

@@ -20,11 +20,17 @@ namespace WebApiProject.Controllers
         public IEnumerable<dynamic> Get()
         {
             //var result= db.TblEmployees.LeftJoin(db.TblDepartments,e=>e.DepartmentId,d=>d.Id,(e,d)=> new EmployeeDetails { Id=e.Id,FirstName=e.FirstName,LastName=e.LastName,Gender=e.Gender,Department=d.Department });
-            var result = db.TblEmployees.GroupJoin(db.TblDepartments, e => e.DepartmentId, d => d.Id,
-                 (e, d) => new { e, d }).SelectMany(x=>x.d,(employee, depart) =>new { employee, depart });
-            //SelectMany(x=>x.d.,(employee,depart)=>new  EmployeeDetails { Id = employee.e.Id, FirstName = employee.e.FirstName, LastName = employee.e.LastName, Gender = employee.e.Gender, Department = depart.Department });
+           
+            //left join and inner join
+            //var result = db.TblEmployees.GroupJoin(db.TblDepartments, e => e.DepartmentId, d => d.Id,
+            //     (e, d) => new { e, d }).SelectMany(x=>x.d,(employee, depart) =>new { employee, depart });
+            ////SelectMany(x=>x.d.,(employee,depart)=>new  EmployeeDetails { Id = employee.e.Id, FirstName = employee.e.FirstName, LastName = employee.e.LastName, Gender = employee.e.Gender, Department = depart.Department });
 
-            return result;
+
+            var rightouterjoin = db.TblDepartments.GroupJoin(db.TblEmployees, left => left.Id, right => right.DepartmentId,
+                (left, right) => new { TableA = right, TableB = left }).SelectMany(p=>p.TableA.DefaultIfEmpty(),
+                (x,y)=> new EmployeeDetails{FirstName=y.FirstName,LastName=y.LastName,Id=y.Id,Department=x.TableB.Department });
+            return rightouterjoin;
             //return Ok();
         }
     }
