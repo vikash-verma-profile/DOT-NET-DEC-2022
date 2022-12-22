@@ -1,0 +1,23 @@
+First vs FirstOrDefault
+Element vs ElementAtOrDefault
+Last vs LastAtOrDefault
+Single and SingleOrDefault
+DefaultifEmpty
+
+Create table tblproduct
+-id
+-productName
+
+create an contoller with name product and create an method inside that so can user can search a product
+
+localhost/api/product/
+
+
+
+
+Entity Framework approaches
+
+1.Design First/Model First EDMX ==>NOt supported in Dot net Core
+2.Db First
+3.Code First
+
