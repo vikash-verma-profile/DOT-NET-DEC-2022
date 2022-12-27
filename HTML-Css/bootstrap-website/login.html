@@ -26,7 +26,7 @@
                     </li>
                 </ul>
                 <span class="navbar-text">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="login.html">Login</a>
                         </li>
@@ -47,15 +47,15 @@
                         <br />
                         <form>
                             <div>
-                                <label class="form-label">UserName</label>
-                                <input type="text" class="form-control" />
+                                <label class="form-label" >UserName</label>
+                                <input type="text" id="txtUserName" class="form-control" />
                             </div>
                             <div>
                                 <label class="form-label">Password</label>
-                                <input type="password" class="form-control" />
+                                <input type="text"  id="txtPassword" class="form-control" />
                             </div>
                             <div class="py-4">
-                                <input type="submit" value="Login" class="btn btn-primary" />
+                                <input type="button" value="Login" class="btn btn-primary" onclick="validate()" />
                             </div>
                         </form>
                     </div>
@@ -69,3 +69,32 @@
 </body>
 
 </html>
+
+<script>
+
+var sample=1;
+let sampleLet=2;
+sampleLet=5;
+if(1==1){
+    var sample=3;
+    let sampleLet=4;
+}
+
+console.log(sample);
+console.log(sampleLet);
+
+
+    function validate() {
+       
+      var Number1=Number(document.getElementById('txtUserName').value);
+      var Number2=Number(document.getElementById('txtPassword').value);
+
+      var i=1+'1';
+      var j=1-'1';
+      var k=1-"abc";
+
+     // console.log(i);
+      console.log(j);
+      console.log(k);
+    }
+</script>

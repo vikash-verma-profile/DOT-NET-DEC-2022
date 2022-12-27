@@ -1,0 +1,10 @@
+threading
+lock and monitor
+mutex,semaphore,samaphoreslim
+autoResetEvent and ManualResetEvent
+ThreadPooling
+Tasks and TPL
+
+Foreground Thread--This will run even though main program quits.
+
+Background Thread--This will quit when main program quits.
