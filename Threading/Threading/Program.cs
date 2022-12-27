@@ -1,33 +1,20 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Threading;
+
 {
-    Maths ObjMaths = new Maths();
-    Thread t1 = new Thread(ObjMaths.Divide);
-    t1.Start();//Child thread
-    ObjMaths.Divide();//Main thread
-}
-class Maths
-{
-    public int Num1, Num2;
-    Random o = new Random();
-    public void Divide()
+    using (var m1=new Mutex(false,"Threading"))
     {
-        for (int i = 0; i < 1000000; i++)
+        if (!m1.WaitOne(5000, false)) //checking weather any other instance is there or not
         {
-            //lock (this)
-            //{
-            Monitor.Enter(this);
-                Num1 = o.Next(1, 2); //1 to 2
-                Num2 = o.Next(1, 2);//1 to 2
-                int result = Num1 / Num2;//Divide
-                Num1 = 0;
-                Num2 = 0;
-            //}
-            Monitor.Exit(this);
+            Console.WriteLine("already a instance is running");
+            Console.ReadLine();
+            return;
         }
+        Console.WriteLine("APP is running");
+        Console.ReadLine();
+
     }
 }
-
 
 
 
