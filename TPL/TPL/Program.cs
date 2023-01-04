@@ -5,30 +5,37 @@
 using System.Diagnostics;
 {
     Stopwatch obj= new Stopwatch();
-    Console.WriteLine("Parallel For Loop Execution");
+    Console.WriteLine("Normal Invoking");
     obj.Start();
-    //for (int i = 0; i < 20; i++)
-    //{
-    //    long total = DoSomeWork();
-    //    Console.WriteLine("{0} - {1}", i, total);
-    //}
-    Parallel.For(0, 20, i =>
-    {
-        long total = DoSomeWork();
-        Console.WriteLine("{0} - {1}", i, total);
-    });
-    DateTime EndDataTime=DateTime.Now;
-    Console.WriteLine("For Loop Execution end");
-    Console.WriteLine(obj.ElapsedTicks.ToString());
+    Method1();
+    Method2();
+    Method3();
     obj.Stop();
+    Console.WriteLine(obj.ElapsedTicks.ToString());
+    Console.WriteLine("Parallel Invoke  ");
+    obj.Reset();
+    obj.Start();
+    Parallel.Invoke(Method1,Method2,Method3);
+    obj.Stop();
+    Console.WriteLine(obj.ElapsedTicks.ToString());
 }
 
-static long DoSomeWork()
+static void Method1()
 {
-    long total = 0;
-    for (int i = 0; i < 100000000; i++)
-    {
-        total +=i;
-    }
-    return total;
+    Thread.Sleep(200);
+    Console.WriteLine("Method 1 is called");
 }
+
+static void Method2()
+{
+    Thread.Sleep(200);
+    Console.WriteLine("Method 2 is called");
+}
+
+
+static void Method3()
+{
+    Thread.Sleep(200);
+    Console.WriteLine("Method 3 is called");
+}
+
