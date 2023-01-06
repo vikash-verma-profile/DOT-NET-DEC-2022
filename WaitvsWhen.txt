@@ -1,0 +1,19 @@
+Step-1
+Employee Class
+-ID
+-Name
+-Salary
+
+Step-2
+GetEmployeeDetails()-Async Task<Employee>
+
+Step-3
+Somethod()-->GetEmployeeDetails
+-print employee details
+
+Step-4
+Call this Somethod() into Main Method
+
+Task.WaitALL()==>Block the current thread until everything is completed
+
+Task.WhenALl()=>return a task which represents the action of waiting until everything is completed
