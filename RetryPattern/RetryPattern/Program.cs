@@ -1,4 +1,6 @@
-﻿namespace RetryPattern
+﻿using System;
+
+namespace RetryPattern
 {
     //Retry Pattern in c#
     internal class Program
@@ -17,6 +19,27 @@
             Console.WriteLine("Main Method End");
         }
         // Retry(Fun<Task>,int RetryTimes,int WaitTime)
+
+        public static async Task Retry(Func<Task> fun, int RetryTimes, int WaitTime)
+        {
+            for (int i = 0; i < RetryTimes; i++)
+            {
+                try
+                {
+                    await fun();
+                    Console.WriteLine("Operation Successful");
+                    break;
+                }catch(Exception ex)
+                {
+
+                    Console.WriteLine($"Retry {i + 1}: Geting Exception : {ex.Message}");
+                    await Task.Delay(WaitTime);
+                }
+               
+            }
+            //final try ro execute the operation
+            await fun();
+        }
         public static async Task RetryMethod()
         {
             var RetryTimes = 3;
