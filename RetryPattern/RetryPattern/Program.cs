@@ -16,7 +16,7 @@
             await RetryMethod();
             Console.WriteLine("Main Method End");
         }
-
+        // Retry(Fun<Task>,int RetryTimes,int WaitTime)
         public static async Task RetryMethod()
         {
             var RetryTimes = 3;
