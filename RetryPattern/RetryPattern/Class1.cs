@@ -8,17 +8,25 @@ namespace RetryPattern
 {
     //Delegate signature
 
-    public delegate int operation(int x,int y);
+    // public delegate int operation(int x,int y);
+
+    delegate void operation();
+
     internal class Class1
     {
         static int Addition(int a,int b)
         {
             return a + b;
         }
-        public static void Main()
+        public static void Main2()
         {
-            operation obj = new operation(Addition);
-            Console.WriteLine(obj(5,10));
+          //  operation obj = new operation(Addition);
+
+            operation obj= delegate
+            {
+                Console.WriteLine("Anonymous Method");
+            };
+            obj();
         }
     }
 }
