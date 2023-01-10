@@ -3,7 +3,7 @@
     //Retry Pattern in c#
     internal class Program
     {
-        static  void Main(string[] args)
+        static async Task Main1(string[] args)
         {
             /*
              * RetryTimes=3
@@ -13,7 +13,7 @@
              * }
              */
             Console.WriteLine("Main Method started");
-            RetryMethod();
+            await RetryMethod();
             Console.WriteLine("Main Method End");
         }
 
