@@ -16,7 +16,7 @@ namespace RetryPattern
         {
             return "The value of y is "+ y;
         }
-        public static void Main()
+        public static void Main5()
         {
             //Action<int> action = Print;
             //action(20);
