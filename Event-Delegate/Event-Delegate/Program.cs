@@ -20,10 +20,6 @@ namespace Event_Delegate
                 _WorkPerformedHandler = (WorkPerformedHandler)Delegate.Remove(_WorkPerformedHandler, value);
             }
         }
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello, World!");
-        }
     }
 
     public enum WorkType
