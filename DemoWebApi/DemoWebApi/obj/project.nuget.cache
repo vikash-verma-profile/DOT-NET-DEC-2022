@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "UaJrKMHXmSVMKp/2LkoEQ3q8gPcXr5LqYjufcJq586oOWK+boiEZq8fnU6bJcvq7jVnFuqxVRSkYHc0Yas+hGA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\om\\Desktop\\Dot-Net\\DOT-NET-DEC-2022\\DOT-NET-DEC-2022\\DemoWebApi\\DemoWebApi\\DemoWebApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\om\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.31\\microsoft.netcore.app.host.win-x64.3.1.31.nupkg.sha512"
+  ],
+  "logs": []
+}
