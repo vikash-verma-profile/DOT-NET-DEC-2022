@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProductWebApi.Models;
+using ProductWebApi.ViewModel;
 
 namespace ProductWebApi.Controllers
 {
@@ -48,7 +49,7 @@ namespace ProductWebApi.Controllers
             var productsToDelete = await db.TblProducts.FindAsync(id);
             if (productsToDelete == null)
             {
-                return NotFound();
+                return NotFound(new ResponseViewModel { Status=200,Message="Product is not available"});
             }
             db.TblProducts.Remove(productsToDelete);
             await db.SaveChangesAsync();
