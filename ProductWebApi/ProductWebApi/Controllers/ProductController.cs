@@ -20,5 +20,39 @@ namespace ProductWebApi.Controllers
             var products = await db.TblProducts.ToListAsync();
             return Ok(products);    
         }
+        [HttpGet]
+        [Route("get-product-by-id")]
+        public async Task<IActionResult> GetProductByIdAsync(int id)
+        {
+            var product = await db.TblProducts.FindAsync(id);
+            return Ok(product);
+        }
+        [HttpPost]
+        public async Task<IActionResult> PostAsync(TblProduct tblProduct)
+        {
+            db.TblProducts.Add(tblProduct);
+            await db.SaveChangesAsync();
+            return Created($"/get-product-by-id?id={tblProduct.Id}",tblProduct);
+        }
+        [HttpPut]
+        public async Task<IActionResult> PutAsync(TblProduct productToUpdate)
+        {
+            db.TblProducts.Update(productToUpdate);
+            await db.SaveChangesAsync();
+            return NoContent();
+        }
+        [HttpDelete]
+        [Route("{id}")]
+        public async Task<IActionResult> DeleteAsync(int id)
+        {
+            var productsToDelete = await db.TblProducts.FindAsync(id);
+            if (productsToDelete == null)
+            {
+                return NotFound();
+            }
+            db.TblProducts.Remove(productsToDelete);
+            await db.SaveChangesAsync();
+            return NoContent();
+        }
     }
 }
