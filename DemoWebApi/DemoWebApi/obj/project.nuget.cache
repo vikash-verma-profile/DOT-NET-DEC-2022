@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "UaJrKMHXmSVMKp/2LkoEQ3q8gPcXr5LqYjufcJq586oOWK+boiEZq8fnU6bJcvq7jVnFuqxVRSkYHc0Yas+hGA==",
+  "dgSpecHash": "a9TbWgY9gvdRLXb17IkWsY2jVg88Ny/406zHYH3Cp5gGuws5GOSo7gdHnyKXIzNN/VlY8BbuQw2vscl/HX0w3w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\om\\Desktop\\Dot-Net\\DOT-NET-DEC-2022\\DOT-NET-DEC-2022\\DemoWebApi\\DemoWebApi\\DemoWebApi.csproj",
+  "projectFilePath": "C:\\Users\\LEVEL UP SOLUTIONS 1\\Desktop\\DOT-NET-DEC-2022-SCOGEN\\DemoWebApi\\DemoWebApi\\DemoWebApi.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\om\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.31\\microsoft.netcore.app.host.win-x64.3.1.31.nupkg.sha512"
+    "C:\\Users\\LEVEL UP SOLUTIONS 1\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\LEVEL UP SOLUTIONS 1\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\LEVEL UP SOLUTIONS 1\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\LEVEL UP SOLUTIONS 1\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.32\\microsoft.netcore.app.host.win-x64.3.1.32.nupkg.sha512"
   ],
   "logs": []
 }
