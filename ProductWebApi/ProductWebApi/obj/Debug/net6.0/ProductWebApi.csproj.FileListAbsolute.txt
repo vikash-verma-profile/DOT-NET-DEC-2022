@@ -172,3 +172,4 @@ C:\Users\LEVEL UP SOLUTIONS 1\Desktop\DOT-NET-DEC-2022-SCOGEN\ProductWebApi\Prod
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\DOT-NET-DEC-2022-SCOGEN\ProductWebApi\ProductWebApi\obj\Debug\net6.0\ProductWebApi.pdb
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\DOT-NET-DEC-2022-SCOGEN\ProductWebApi\ProductWebApi\obj\Debug\net6.0\ProductWebApi.genruntimeconfig.cache
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\DOT-NET-DEC-2022-SCOGEN\ProductWebApi\ProductWebApi\obj\Debug\net6.0\ref\ProductWebApi.dll
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\DOT-NET-DEC-2022-SCOGEN\ProductWebApi\ProductWebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
