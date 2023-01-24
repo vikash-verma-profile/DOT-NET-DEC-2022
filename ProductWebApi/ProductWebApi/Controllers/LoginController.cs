@@ -15,10 +15,19 @@ namespace ProductWebApi.Controllers
             db = _db;
         }
         [HttpPost]
+        [Route("login")]
         public async Task<IActionResult> Login()
         {
             var products = await db.TblProducts.ToListAsync();
             return Ok(products);
+        }
+        [HttpPost]
+        [Route("register")]
+        public async Task<IActionResult> Register(TblLogin login)
+        {
+            db.TblLogins.Add(login);
+            await db.SaveChangesAsync();
+            return Created("succcess",login);
         }
     }
 }

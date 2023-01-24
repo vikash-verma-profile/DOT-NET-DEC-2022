@@ -59,6 +59,25 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.13": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.10.0"
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
         "type": "package",
         "compile": {
@@ -1300,6 +1319,21 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.13": {
+      "sha512": "D8d0GzKZHFVw2Mru8JUEakQ2eF8obICVtbGFvHsoXmVVQOFkDYRpLaDSMwD4CIeecQNMgriozRRZFJ3kf+Ib+Q==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/6.0.13",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll",
+        "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.xml",
+        "microsoft.aspnetcore.authentication.jwtbearer.6.0.13.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
@@ -3708,29 +3742,31 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.13",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.2",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.2",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\om\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\LEVEL UP SOLUTIONS 1\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\om\\Desktop\\Dot-Net\\DOT-NET-DEC-2022\\DOT-NET-DEC-2022\\ProductWebApi\\ProductWebApi\\ProductWebApi.csproj",
+      "projectUniqueName": "C:\\Users\\LEVEL UP SOLUTIONS 1\\Desktop\\DOT-NET-DEC-2022-SCOGEN\\ProductWebApi\\ProductWebApi\\ProductWebApi.csproj",
       "projectName": "ProductWebApi",
-      "projectPath": "C:\\Users\\om\\Desktop\\Dot-Net\\DOT-NET-DEC-2022\\DOT-NET-DEC-2022\\ProductWebApi\\ProductWebApi\\ProductWebApi.csproj",
-      "packagesPath": "C:\\Users\\om\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\om\\Desktop\\Dot-Net\\DOT-NET-DEC-2022\\DOT-NET-DEC-2022\\ProductWebApi\\ProductWebApi\\obj\\",
+      "projectPath": "C:\\Users\\LEVEL UP SOLUTIONS 1\\Desktop\\DOT-NET-DEC-2022-SCOGEN\\ProductWebApi\\ProductWebApi\\ProductWebApi.csproj",
+      "packagesPath": "C:\\Users\\LEVEL UP SOLUTIONS 1\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\LEVEL UP SOLUTIONS 1\\Desktop\\DOT-NET-DEC-2022-SCOGEN\\ProductWebApi\\ProductWebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\om\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\LEVEL UP SOLUTIONS 1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3738,6 +3774,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3756,6 +3793,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Microsoft.AspNetCore.Authentication.JwtBearer": {
+            "target": "Package",
+            "version": "[6.0.13, )"
+          },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[7.0.2, )"
@@ -3790,7 +3831,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
