@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Components.Forms;
+﻿using Azure;
+using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -44,7 +45,13 @@ namespace ProductWebApi.Controllers
         {
             db.TblLogins.Add(login);
             await db.SaveChangesAsync();
-            return Created("succcess",login);
+            var tokenString = GenerateJsonWebToken(new UserModel { UserName=login.UserName,Password=login.Password});
+            if (tokenString.IsNullOrEmpty())
+            {
+                return Ok(new ResponseViewModel { Status = 200, Message = "Some error Occured" });
+            }
+            return Ok(new { token = tokenString });
+            //return Created("succcess",login);
         }
 
         private UserModel AuthenticateUser(TblLogin login)
