@@ -2,6 +2,6 @@
 {
     public class Query
     {
-        public string Hello()=>"Hello";
+        //public string Hello()=>"Hello";
     }
 }
