@@ -1,3 +1,4 @@
+using GraphQlExample.Database;
 using GraphQlExample.GraphQl;
 
 namespace GraphQlExample
@@ -7,7 +8,8 @@ namespace GraphQlExample
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            builder.Services.AddGraphQLServer().AddQueryType<Query>();
+            builder.Services.AddSingleton<Repository>().
+                AddGraphQLServer().AddQueryType<Query>().AddMutationType<Mutation>();
             var app = builder.Build();
             //app.Map("/", () => "Hi I am Vikash");
             app.MapGraphQL();

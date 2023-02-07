@@ -1,0 +1,3 @@
+AddSingleton-It will be same for every object and every request.
+AddScoped-It will be same within a request ,but differnet across differnet requests.
+AddTransit-Here objects are always different,a new instance is provided to every controller and every service
