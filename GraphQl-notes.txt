@@ -1,0 +1,17 @@
+Problem in REST API
+
+1.fetch all data (over-fatching).
+2.multiple network requests to get multiple resources
+3.network requests
+
+Why GRAPHQL
+
+1.Strongly-typed Schema-SDL
+	-Boolean,String,Int ,Float Scaler,ID
+2.No over-Fatching/Under-Fatching
+
+WHEN to use GRAPHQL
+
+1.Apps for devices like mobile phones,Smartwatches.
+2.Applications where we have nested data.
+3.proxy on client side.
