@@ -1,0 +1,50 @@
+Adding an Author
+
+mutation addAuthor{
+  addAuthor(authorInput: {name:"Vikash"}){
+    record{
+      id
+      name
+    }
+    error
+  }
+}
+==========================================================================================
+Adding a book
+
+mutation addBook{
+  addBook(input: {
+    author:"6a45d376-940b-4342-908b-2ae840623dfb",
+    title:"Rich Dad Poor Dad"
+  }){
+    record{
+      id
+      title
+      author {
+        name
+      }
+    }
+    error
+  }
+}
+==========================================================================================
+Get all authors
+
+query{
+  authors{
+    id
+    name
+  }
+}
+==========================================================================================
+Get All Books
+
+query{
+  books{
+    id
+    title
+    author {
+      name
+    }
+  }
+}

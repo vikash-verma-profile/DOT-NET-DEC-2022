@@ -10,6 +10,11 @@ namespace GraphQlExample.Database
         {
             return Task.FromResult(Books);
         }
+
+        public Task<List<Author>> GetAuthorsAsync()
+        {
+            return Task.FromResult(Authors);
+        }
         public Task<Author?> GetAuthor(Guid authorId)
         {
             return Task.FromResult(Authors.FirstOrDefault(a => a.Id == authorId));
