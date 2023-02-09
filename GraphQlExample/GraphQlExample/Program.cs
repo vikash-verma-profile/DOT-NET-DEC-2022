@@ -1,5 +1,7 @@
 using GraphQlExample.Database;
+using GraphQlExample.EntityFramework;
 using GraphQlExample.GraphQl;
+using Microsoft.EntityFrameworkCore;
 
 namespace GraphQlExample
 {
@@ -8,7 +10,11 @@ namespace GraphQlExample
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            builder.Services.AddSingleton<Repository>().
+            builder.Services.AddDbContext<LibraryContext>(options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("LibraryConnection"));
+            });
+            builder.Services.AddScoped<Repository>().
                 AddGraphQLServer().AddQueryType<Query>().AddMutationType<Mutation>();
             var app = builder.Build();
             //app.Map("/", () => "Hi I am Vikash");

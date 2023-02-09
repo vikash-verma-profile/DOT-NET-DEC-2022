@@ -1,0 +1,4 @@
+Query VS Mutation
+
+Queries are used to fetch data from server
+Mutation are used to modify or write server side data

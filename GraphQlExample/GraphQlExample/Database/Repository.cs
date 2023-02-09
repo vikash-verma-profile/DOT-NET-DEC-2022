@@ -1,32 +1,41 @@
-﻿using GraphQlExample.Models;
+﻿using GraphQlExample.EntityFramework;
+using GraphQlExample.Models;
 
 namespace GraphQlExample.Database
 {
     public class Repository
     {
-        List<Author> Authors = new List<Author>();
-        List<Book> Books = new List<Book>();
+        //List<Author> Authors = new List<Author>();
+        //List<Book> Books = new List<Book>();
+        LibraryContext db;
+        public Repository(LibraryContext _db)
+        {
+            db = _db;
+        }
+       
         public Task<List<Book>> GetBooksAsync()
         {
-            return Task.FromResult(Books);
+            return Task.FromResult(db.Books.ToList());
         }
 
         public Task<List<Author>> GetAuthorsAsync()
         {
-            return Task.FromResult(Authors);
+            return Task.FromResult(db.Authors.ToList());
         }
         public Task<Author?> GetAuthor(Guid authorId)
         {
-            return Task.FromResult(Authors.FirstOrDefault(a => a.Id == authorId));
+            return Task.FromResult(db.Authors.FirstOrDefault(a => a.Id == authorId));
         }
         public Task AddAuthor(Author author)
         {
-            Authors.Add(author);
+            db.Authors.Add(author);
+            db.SaveChanges();
             return Task.CompletedTask;
         }
         public Task AddBook(Book book)
         {
-            Books.Add(book);
+            db.Books.Add(book);
+            db.SaveChanges();
             return Task.CompletedTask;
         }
     }
