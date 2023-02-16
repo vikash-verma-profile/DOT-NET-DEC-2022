@@ -1,5 +1,5 @@
 ﻿using GraphQlExample.Models;
-using Microsoft.AspNetCore.Authorization;
+using HotChocolate.AspNetCore.Authorization;
 
 namespace GraphQlExample.Database
 {

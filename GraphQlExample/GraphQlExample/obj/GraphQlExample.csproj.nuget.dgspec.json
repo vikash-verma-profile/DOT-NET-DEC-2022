@@ -49,6 +49,10 @@
               "target": "Package",
               "version": "[12.16.0, )"
             },
+            "HotChocolate.AspNetCore.Authorization": {
+              "target": "Package",
+              "version": "[12.16.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.2, )"

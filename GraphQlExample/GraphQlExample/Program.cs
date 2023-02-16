@@ -18,6 +18,7 @@ namespace GraphQlExample
             builder.Services.AddScoped<Repository>().AddAuthentication().Services.AddAuthorization(
                 o=>o.AddPolicy("Librarian",p=>p.RequireAssertion(_ =>false))).
                 AddGraphQLServer().AddQueryType<Query>().AddMutationType<Mutation>().
+                AddAuthorization().
                 UseField<ExceptionMiddleware>();
             
             var app = builder.Build();
