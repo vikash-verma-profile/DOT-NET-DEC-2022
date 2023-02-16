@@ -1,9 +1,11 @@
 ﻿using GraphQlExample.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace GraphQlExample.Database
 {
     public class Mutation
     {
+        [Authorize(Policy ="Librarian")]
         public async Task<AuthorPayload> AddAuthor(AuthorInput authorInput, [Service] Repository repository)
         {
             var author = new Author(Guid.NewGuid(), authorInput.Name);

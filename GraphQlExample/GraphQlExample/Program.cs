@@ -14,8 +14,12 @@ namespace GraphQlExample
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("LibraryConnection"));
             });
-            builder.Services.AddScoped<Repository>().
-                AddGraphQLServer().AddQueryType<Query>().AddMutationType<Mutation>();
+
+            builder.Services.AddScoped<Repository>().AddAuthentication().Services.AddAuthorization(
+                o=>o.AddPolicy("Librarian",p=>p.RequireAssertion(_ =>false))).
+                AddGraphQLServer().AddQueryType<Query>().AddMutationType<Mutation>().
+                UseField<ExceptionMiddleware>();
+            
             var app = builder.Build();
             //app.Map("/", () => "Hi I am Vikash");
             app.MapGraphQL();
