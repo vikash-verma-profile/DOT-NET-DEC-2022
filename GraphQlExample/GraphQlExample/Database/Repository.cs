@@ -38,5 +38,10 @@ namespace GraphQlExample.Database
             db.SaveChanges();
             return Task.CompletedTask;
         }
+
+        public Task<Login?> ValidateUser(Login login)
+        {
+            return Task.FromResult(db.Logins.FirstOrDefault(a => a.Password.ToLower() ==login.Password.ToLower() && a.Email==login.Email ));
+        }
     }
 }

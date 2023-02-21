@@ -21,6 +21,17 @@ namespace GraphQlExample.Database
             await repository.AddBook(book);
             return new BookPayload(book);
         }
+
+        public string UserLogin(LoginInput login, [Service] Repository repository)
+        {
+            var currentUser = repository.ValidateUser(new Login() { Email=login.Email,Password=login.Password});
+            if (currentUser != null)
+            {
+
+            }
+
+            return "";
+        }
     }
 }
 public record AuthorInput(string Name);
@@ -30,3 +41,5 @@ public record AuthorPayload(Author? Record,string?Error=null):Payload(Error);
 public record BookPayload(Book? Record, string? Error = null) : Payload(Error);
 
 public record Payload(string? Error);
+
+public record LoginInput(string Email, string Password,string? Error = null) :Payload(Error);

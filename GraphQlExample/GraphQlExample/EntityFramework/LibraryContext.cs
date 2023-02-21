@@ -8,6 +8,7 @@ namespace GraphQlExample.EntityFramework
         public DbSet<Author> Authors { get; set; }
         public DbSet<Book> Books { get; set; }
 
+        public DbSet<Login> Logins { get; set; }
         public LibraryContext(DbContextOptions options):base(options)
         {
 
