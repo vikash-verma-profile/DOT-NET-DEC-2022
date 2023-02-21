@@ -1,7 +1,9 @@
 using GraphQlExample.Database;
 using GraphQlExample.EntityFramework;
 using GraphQlExample.GraphQl;
+using GraphQlExample.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace GraphQlExample
 {
@@ -15,6 +17,9 @@ namespace GraphQlExample
                 options.UseSqlServer(builder.Configuration.GetConnectionString("LibraryConnection"));
             });
 
+            //added to inject the configuration settings
+            builder.Services.Configure<TokenSettings>(builder.Configuration.GetSection("JWT"));
+            
             builder.Services.AddScoped<Repository>().AddAuthentication().Services.AddAuthorization(
                 o=>o.AddPolicy("Librarian",p=>p.RequireAssertion(_ =>false))).
                 AddGraphQLServer().AddQueryType<Query>().AddMutationType<Mutation>().

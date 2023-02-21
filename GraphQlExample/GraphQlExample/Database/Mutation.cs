@@ -1,5 +1,9 @@
 ﻿using GraphQlExample.Models;
 using HotChocolate.AspNetCore.Authorization;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Text;
 
 namespace GraphQlExample.Database
 {
@@ -22,12 +26,20 @@ namespace GraphQlExample.Database
             return new BookPayload(book);
         }
 
-        public string UserLogin(LoginInput login, [Service] Repository repository)
+        public string UserLogin(LoginInput login, [Service] Repository repository, [Service] IOptions<TokenSettings> tokensettings)
         {
             var currentUser = repository.ValidateUser(new Login() { Email=login.Email,Password=login.Password});
             if (currentUser != null)
             {
+                var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(tokensettings.Value.Key));
+                var credentials = new SigningCredentials(securityKey,SecurityAlgorithms.HmacSha256);
 
+                var jwtToken = new JwtSecurityToken(issuer: tokensettings.Value.Issuer,
+                    audience: tokensettings.Value.Audience,
+                    expires: DateTime.Now.AddMinutes(20),
+                    signingCredentials:credentials) ;
+
+                return new JwtSecurityTokenHandler().WriteToken(jwtToken);
             }
 
             return "";

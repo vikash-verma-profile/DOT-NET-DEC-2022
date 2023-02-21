@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "L5T12PR2XTQH3bpvMRQ7K98JW8ZSIyjlBtCcagfOfxAA4Wt5KQ2kM4hD5PMlBxBtZ/FF2JW3YaAP4w3hek5rGA==",
+  "dgSpecHash": "I+HiShFNSn/GaXpGFpoCujJIma+Cc7P/5+Ypg3ZcLkZTsVArVsYXwZihk4WBWkmm7xfPiSEazSCybqiM2AKCIA==",
   "success": true,
   "projectFilePath": "C:\\Users\\LEVEL UP SOLUTIONS 1\\Desktop\\DOT-NET-DEC-2022-SCOGEN\\GraphQlExample\\GraphQlExample\\GraphQlExample.csproj",
   "expectedPackageFiles": [
@@ -28,6 +28,7 @@
     "C:\\Users\\LEVEL UP SOLUTIONS 1\\.nuget\\packages\\hotchocolate.utilities.introspection\\12.16.0\\hotchocolate.utilities.introspection.12.16.0.nupkg.sha512",
     "C:\\Users\\LEVEL UP SOLUTIONS 1\\.nuget\\packages\\hotchocolate.validation\\12.16.0\\hotchocolate.validation.12.16.0.nupkg.sha512",
     "C:\\Users\\LEVEL UP SOLUTIONS 1\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\LEVEL UP SOLUTIONS 1\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.14\\microsoft.aspnetcore.authentication.jwtbearer.6.0.14.nupkg.sha512",
     "C:\\Users\\LEVEL UP SOLUTIONS 1\\.nuget\\packages\\microsoft.aspnetcore.authorization\\3.1.4\\microsoft.aspnetcore.authorization.3.1.4.nupkg.sha512",
     "C:\\Users\\LEVEL UP SOLUTIONS 1\\.nuget\\packages\\microsoft.aspnetcore.metadata\\3.1.4\\microsoft.aspnetcore.metadata.3.1.4.nupkg.sha512",
     "C:\\Users\\LEVEL UP SOLUTIONS 1\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
