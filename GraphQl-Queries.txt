@@ -48,3 +48,11 @@ query{
     }
   }
 }
+
+==========================================================================================
+User Login
+
+mutation userLogin{
+  userLogin(login: {email:"vikash@sample.com",password:"123456"})
+    
+  }
