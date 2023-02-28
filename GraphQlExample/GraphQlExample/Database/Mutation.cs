@@ -37,7 +37,8 @@ namespace GraphQlExample.Database
                 var jwtToken = new JwtSecurityToken(issuer: tokensettings.Value.Issuer,
                     audience: tokensettings.Value.Audience,
                     expires: DateTime.Now.AddMinutes(20),
-                    signingCredentials:credentials) ;
+                    signingCredentials:credentials
+                    ) ;
 
                 return new JwtSecurityTokenHandler().WriteToken(jwtToken);
             }

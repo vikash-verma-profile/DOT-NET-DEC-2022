@@ -51,7 +51,7 @@ namespace GraphQlExample
             });
             builder.Services.
               AddAuthorization(
-             o=>o.AddPolicy("Librarian",p=>p.RequireAssertion(_ =>false))).AddGraphQLServer().AddQueryType<Query>().AddMutationType<Mutation>().
+             o=>o.AddPolicy("Librarian",p=>p.RequireAssertion(_ =>true))).AddGraphQLServer().AddQueryType<Query>().AddMutationType<Mutation>().
               AddAuthorization().
               UseField<ExceptionMiddleware>();
 
