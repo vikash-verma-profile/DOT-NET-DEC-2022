@@ -1,0 +1,9 @@
+Monolithic VS Microservices
+
+Monolithic 
+1.Deployment
+2.Development
+3.Maintenance
+4.only one technology.
+5.Performance and sacalibility
+6.Infrastructure
