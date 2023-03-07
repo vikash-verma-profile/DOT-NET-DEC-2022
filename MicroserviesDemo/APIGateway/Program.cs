@@ -1,3 +1,6 @@
+using Ocelot.DependencyInjection;
+using Ocelot.Middleware;
+
 namespace APIGateway
 {
     public class Program
@@ -5,9 +8,15 @@ namespace APIGateway
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            // Added for ocelot
+            builder.Configuration.AddJsonFile("Ocelot.json");
+            builder.Services.AddOcelot(builder.Configuration);
+
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+
+           
 
             var app = builder.Build();
 
@@ -27,7 +36,8 @@ namespace APIGateway
             app.UseAuthorization();
 
             app.MapRazorPages();
-
+            // Added for ocelot
+            app.UseOcelot();
             app.Run();
         }
     }
