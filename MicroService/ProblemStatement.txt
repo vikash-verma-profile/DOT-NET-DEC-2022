@@ -1,0 +1,7 @@
+Problem STatement for Microservice
+
+1.Create an empty solution
+2.1 project -OrderAPI- place an order-swagger-jwt
+3.1 Project -CatalogAPI- add and update an product-swagger-jwt
+4.Create another class library project and keep your models over there and reference  that project in both order and Catalog.
+
