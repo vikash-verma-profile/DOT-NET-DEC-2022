@@ -1,4 +1,5 @@
-﻿using MicroservicesModel.Models;
+﻿using MassTransit;
+using MicroservicesModel.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,9 +10,11 @@ namespace Order.Controllers
     public class OrderController : ControllerBase
     {
         MicroserviceDemoContext db;
-        public OrderController(MicroserviceDemoContext _db)
+        IBus bus;
+        public OrderController(MicroserviceDemoContext _db,IBus _bus)
         {
             db = _db;
+            bus = _bus;
         }
         [HttpGet]
         public IEnumerable<TblOrder> GetOrders()
@@ -19,10 +22,13 @@ namespace Order.Controllers
             return db.TblOrders;
         }
         [HttpPost]
-        public IActionResult PostOrders(TblOrder order)
+        public async Task<IActionResult> PostOrders(TblOrder order)
         {
             db.TblOrders.Add(order);
             db.SaveChanges();
+            Uri uri = new Uri("rabbitmq:localhost/OrderQueue");
+            var endpoint = await bus.GetSendEndpoint(uri);
+            await endpoint.Send(order);
             return Ok(new { Message="Your order is being placed."});
         }
     }

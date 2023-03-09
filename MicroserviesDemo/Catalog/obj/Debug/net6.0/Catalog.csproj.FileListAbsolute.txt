@@ -80,3 +80,12 @@ C:\Users\LEVEL UP SOLUTIONS 1\Desktop\DOT-NET-DEC-2022-SCOGEN\MicroserviesDemo\C
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\DOT-NET-DEC-2022-SCOGEN\MicroserviesDemo\Catalog\bin\Debug\net6.0\MicroservicesModel.dll
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\DOT-NET-DEC-2022-SCOGEN\MicroserviesDemo\Catalog\bin\Debug\net6.0\MicroservicesModel.pdb
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\DOT-NET-DEC-2022-SCOGEN\MicroserviesDemo\Catalog\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\DOT-NET-DEC-2022-SCOGEN\MicroserviesDemo\Catalog\bin\Debug\net6.0\MassTransit.dll
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\DOT-NET-DEC-2022-SCOGEN\MicroserviesDemo\Catalog\bin\Debug\net6.0\MassTransit.Abstractions.dll
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\DOT-NET-DEC-2022-SCOGEN\MicroserviesDemo\Catalog\bin\Debug\net6.0\MassTransit.AspNetCoreIntegration.dll
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\DOT-NET-DEC-2022-SCOGEN\MicroserviesDemo\Catalog\bin\Debug\net6.0\MassTransit.ExtensionsDependencyInjectionIntegration.dll
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\DOT-NET-DEC-2022-SCOGEN\MicroserviesDemo\Catalog\bin\Debug\net6.0\MassTransit.RabbitMqTransport.dll
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\DOT-NET-DEC-2022-SCOGEN\MicroserviesDemo\Catalog\bin\Debug\net6.0\Microsoft.Extensions.Diagnostics.HealthChecks.dll
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\DOT-NET-DEC-2022-SCOGEN\MicroserviesDemo\Catalog\bin\Debug\net6.0\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\DOT-NET-DEC-2022-SCOGEN\MicroserviesDemo\Catalog\bin\Debug\net6.0\RabbitMQ.Client.dll
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\DOT-NET-DEC-2022-SCOGEN\MicroserviesDemo\Catalog\bin\Debug\net6.0\System.Text.Json.dll

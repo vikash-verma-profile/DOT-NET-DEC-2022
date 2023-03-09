@@ -1,3 +1,5 @@
+using Catalog.Consumer;
+using MassTransit;
 using MicroservicesModel.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -15,7 +17,23 @@ namespace Catalog
 
             // Add services to the container.
             //builder.Services.AddScoped<>
+            builder.Services.AddMassTransit(x => {
+                x.AddConsumer<OrderConsumer>();
+                x.AddBus(provider => Bus.Factory.CreateUsingRabbitMq(config =>
+                {
+                    config.Host(new Uri("rabbitmq://localhost/"), h =>
+                    {
+                        h.Username("guest");
+                        h.Password("guest");
+                    });
+                    config.ReceiveEndpoint("OrderQueue", ep =>
+                    {
+                        ep.ConfigureConsumer<OrderConsumer>(provider);
+                    });
 
+                }));
+            });
+          
             builder.Services.AddSwaggerGen(x =>
             {
                 x.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
