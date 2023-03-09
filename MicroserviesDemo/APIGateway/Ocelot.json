@@ -1,7 +1,7 @@
 {
   "Routes": [
     {
-      "DownstreamPathTemplate": "/api/Catalog",
+      "DownstreamPathTemplate": "/api/Catalog",//upstream url will navigate to this url
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -9,7 +9,7 @@
           "Port": 7253
         }
       ],
-      "UpstreamPathTemplate": "/api/gateway/catalog",
+      "UpstreamPathTemplate": "/api/gateway/catalog",// client will hit this
       "UpstreamHttpMethod": [ "Get" ]
     },
     {

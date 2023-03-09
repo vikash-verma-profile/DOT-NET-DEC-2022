@@ -1,0 +1,4 @@
+step-1 open cmd
+step-2 cd to C:\Program Files\RabbitMQ Server\rabbitmq_server-3.10.5\sbin
+step 3:-rabbitmq-plugins enable rabbitmq_management
+step-4:-access http://localhost:15672/#/ and username and password will be guest
