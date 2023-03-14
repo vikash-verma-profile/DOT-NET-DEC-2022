@@ -10,4 +10,7 @@ Problems that we have in current
 -The Data model is expended
 -Recording subclasses are added
 
+Process: run the rule's logic
+shouldprocess: which check the data to see if the rule should be run
+
 
