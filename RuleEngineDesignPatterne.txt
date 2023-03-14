@@ -1,0 +1,13 @@
+In Version V1 only title and the artist need not to be blank
+In Version V2 title and composer are all not blank
+
+RAT NEST
+
+
+Problems that we have in current
+
+-More versions are added
+-The Data model is expended
+-Recording subclasses are added
+
+
