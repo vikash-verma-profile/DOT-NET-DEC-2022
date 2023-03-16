@@ -1,0 +1,8 @@
+1.BlueDart-20 per packet-122001,144001
+2.Fedex-40 per packet-155001
+3.DHL-10 per packet-166001
+4.Delhivery-5 per packet-122001
+
+
+Order to ship at 122001 location.
+

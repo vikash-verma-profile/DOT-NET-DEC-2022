@@ -6,7 +6,9 @@ namespace RuleEngineDesignPattern
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            //Console.WriteLine("Hello, World!");
+            Validator validator= new Validator();
+            validator.ValidateRecordings(new Recording { Aritist="",Composer=""});
         }
     }
 
