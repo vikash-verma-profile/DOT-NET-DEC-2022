@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Account
 {
-    internal class Account : IAccount
+    public class Account : IAccount
     {
         double _balance;
         public double CurrentBalance { get { return _balance; } }

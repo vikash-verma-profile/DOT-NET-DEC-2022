@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Account
 {
-    internal interface IAccount
+    public interface IAccount
     {
         double CurrentBalance { get; }
         double Deposit(double amount);
