@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using SampleApi.Models;
+
 namespace SampleApi
 {
     public class Program
@@ -7,7 +10,10 @@ namespace SampleApi
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-
+            builder.Services.AddDbContext<DbSampleContext>(options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("SampleDbConnection"));
+            });
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();

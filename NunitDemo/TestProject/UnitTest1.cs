@@ -1,6 +1,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using SampleApi.Controllers;
+using SampleApi.Models;
 
 namespace TestProject
 {
@@ -43,6 +44,16 @@ namespace TestProject
             TestingController home = new TestingController(logger);
             string result = home.GetMessage();
             Assert.AreEqual("Hi !", result);
+        }
+        [Test]
+        public void Test5()
+        {
+            var serviceProvider = new ServiceCollection().BuildServiceProvider();
+            var factory = serviceProvider.GetService<DbSampleContext>();
+           // var dbObject = factory.;
+            HomeController home = new HomeController(factory);
+            string result = home.GetUserName(1);
+            Assert.AreEqual("Vikash", result);
         }
     }
 }
