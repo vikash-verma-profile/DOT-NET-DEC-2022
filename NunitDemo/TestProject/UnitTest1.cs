@@ -48,10 +48,9 @@ namespace TestProject
         [Test]
         public void Test5()
         {
-            var serviceProvider = new ServiceCollection().BuildServiceProvider();
-            var factory = serviceProvider.GetService<DbSampleContext>();
+            var context = new DbSampleContext();
            // var dbObject = factory.;
-            HomeController home = new HomeController(factory);
+            HomeController home = new HomeController(context);
             string result = home.GetUserName(1);
             Assert.AreEqual("Vikash", result);
         }

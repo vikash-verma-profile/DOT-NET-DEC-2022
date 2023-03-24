@@ -1,0 +1,6 @@
+Create a Sample Table 
+ -Id
+ -Name
+GetName from sample Table in a controller
+
+Write test case to check that name in test project
