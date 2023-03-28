@@ -1,0 +1,9 @@
+{
+  "styker-config": 
+  {
+    "repoters": [
+      "progress",
+      "html"
+    ]
+  }
+}

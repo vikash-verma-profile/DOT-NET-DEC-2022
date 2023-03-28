@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "yVhaIJAbREs7XhrDzoNN0TQhASlGNhDcU9OTU75LvVKFwH41X/4oNF8JzzhzxvfK8qbezRksOTSt2bk6yjIj4g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\LEVEL UP SOLUTIONS 1\\Desktop\\DOT-NET-DEC-2022-SCOGEN\\sampleDemoStryker\\sampleDemoStryker\\sampleDemoStryker.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\LEVEL UP SOLUTIONS 1\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\LEVEL UP SOLUTIONS 1\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\LEVEL UP SOLUTIONS 1\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\LEVEL UP SOLUTIONS 1\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.32\\microsoft.netcore.app.host.win-x64.3.1.32.nupkg.sha512"
+  ],
+  "logs": []
+}

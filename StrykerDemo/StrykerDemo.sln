@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrykerDemo", "StrykerDemo\StrykerDemo.csproj", "{D67C96E3-B4E2-4D29-AC38-95C6D2AEE430}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrykerDemo.Tests", "StrykerDemo.Tests\StrykerDemo.Tests.csproj", "{147D5E5C-9ECD-4B05-9C14-314292A5B784}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D67C96E3-B4E2-4D29-AC38-95C6D2AEE430}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D67C96E3-B4E2-4D29-AC38-95C6D2AEE430}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D67C96E3-B4E2-4D29-AC38-95C6D2AEE430}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D67C96E3-B4E2-4D29-AC38-95C6D2AEE430}.Release|Any CPU.Build.0 = Release|Any CPU
+		{147D5E5C-9ECD-4B05-9C14-314292A5B784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{147D5E5C-9ECD-4B05-9C14-314292A5B784}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{147D5E5C-9ECD-4B05-9C14-314292A5B784}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{147D5E5C-9ECD-4B05-9C14-314292A5B784}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5F5227A0-8C26-4618-88F5-C99107A8DBC7}
+	EndGlobalSection
+EndGlobal

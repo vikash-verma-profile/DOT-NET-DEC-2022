@@ -1,0 +1,5 @@
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\DOT-NET-DEC-2022-SCOGEN\sampleDemoStryker\sampleDemoStryker\obj\Debug\netcoreapp3.1\sampleDemoStryker.csproj.AssemblyReference.cache
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\DOT-NET-DEC-2022-SCOGEN\sampleDemoStryker\sampleDemoStryker\obj\Debug\netcoreapp3.1\sampleDemoStryker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\DOT-NET-DEC-2022-SCOGEN\sampleDemoStryker\sampleDemoStryker\obj\Debug\netcoreapp3.1\sampleDemoStryker.AssemblyInfoInputs.cache
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\DOT-NET-DEC-2022-SCOGEN\sampleDemoStryker\sampleDemoStryker\obj\Debug\netcoreapp3.1\sampleDemoStryker.AssemblyInfo.cs
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\DOT-NET-DEC-2022-SCOGEN\sampleDemoStryker\sampleDemoStryker\obj\Debug\netcoreapp3.1\sampleDemoStryker.csproj.CoreCompileInputs.cache
